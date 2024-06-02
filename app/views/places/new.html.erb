@@ -1,10 +1,16 @@
-<h1>New Place</h1>
+<% if @current_user == nil %>
+  <p>NOTHING TO SEE HERE!</p>
 
-<form action="/places" method="post">
-  <p>
-    <label for="name_input">Name</label>
-    <input type="text" name="name" id="name_input">
-  </p>
+<% else %>
+  <h1>New Place</h1>
 
-  <button>Save</button>
-</form>
+  <form action="/places" method="post">
+    <p>
+      <label for="name_input">Name</label>
+      <input type="text" name="name" id="name_input">
+    </p>
+
+    <button>Save</button>
+  </form>
+
+<% end %>

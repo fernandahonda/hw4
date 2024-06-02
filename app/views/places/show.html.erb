@@ -1,3 +1,8 @@
+<% if @current_user == nil %>
+  <p>NOTHING TO SEE HERE!</p>
+
+<% else %>
+
 <h1><%= @place["name"] %></h1>
 
 <h2>My Entries</h2>
@@ -14,3 +19,5 @@
 <p>
   <a href="/places">Back to All Places</a>
 </p>
+
+<% end %>
